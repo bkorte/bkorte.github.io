@@ -1,0 +1,58 @@
+.form {
+
+  &__well {
+    margin: 1rem 0;
+  }
+
+  &__field {
+    display: block;
+    flex: 0 0 100%;
+    padding: 0 1rem;
+    margin: 1rem 0;
+
+    &--half {
+      flex: 0 0 50%;
+    }
+
+    &s {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -1rem;
+    }
+  }
+
+  &__required {
+    color: $red;
+    padding-right: 2px;
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__input {
+    @include transition();
+    display: block;
+    width: 100%;
+    padding: 0.6875rem;
+    font-size: 1.2rem;
+    border: 1px solid $lightestgrey;
+
+    &--select {
+      -webkit-appearance: none;
+      appearance: none;
+      background: none;
+      border-radius: 0;
+    }
+
+    &--textarea {
+      min-height: 240px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $blue;
+      box-shadow: 0 0 0 3px $blue inset;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+html {
+  -webkit-font-smoothing: antialiased !important;
+  font-size: 14px;
+  color: $offblack;
+  background: #fff;
+  font-family: $body_font;
+  line-height: 1.5em;
+  box-sizing: border-box;
+
+  @media(min-width: $small) {
+    font-size: $rem;
+  }
+}
+
+body {
+  padding-bottom: 8rem;
+}
+
+a {
+  color: $blue;
+  @include transition();
+
+  &:hover {
+    color: darken($blue, 0.1);
+  }
+
+  &:visited {
+    color: $grey;
+  }
+
+  &:active {
+    color: darken($blue, 20%);
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.skewBackground {
+  position: relative;
+
+  &:after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $blue;
+    transform: skewY(-3deg);
+    z-index: 1;
+  }
+}

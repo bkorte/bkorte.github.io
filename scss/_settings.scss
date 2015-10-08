@@ -1,0 +1,25 @@
+
+$rem: 16px;
+$gutter: 15px;
+$radius: 5px;
+
+$red: #D0021B;
+$blue: #71DBE3;
+$offblack: #4A4A4A;
+$darkgrey: #6A6A6A;
+$grey: #999999;
+$lightgrey: #BBBBBB;
+$lightestgrey: #ddd;
+
+$grey_alpha: rgba(black, 0.45);
+$offblack_alpha: rgba(black, 0.7);
+$offwhite_alpha: rgba(white, 0.8);
+
+$small: 570px;
+$medium: 780px;
+$large: 1060px;
+$small_padded: $small + (2 * $rem);
+$medium_padded: $medium + (2 * $rem);
+$large_padded: $large + (2 * $rem);
+
+$body_font: 'proxima-nova-soft', 'ProximaNovaSoft', 'Proxima Nova Soft', 'ProximaNova', 'Proxima Nova', 'Helvetica Neue', 'Helvetica Neue', sans-serif;

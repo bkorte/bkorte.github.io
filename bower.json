@@ -1,0 +1,22 @@
+{
+  "name": "bkit",
+  "version": "0.0.1",
+  "authors": [
+    "Blaine Korte <info@bkit.ca>"
+  ],
+  "description": "Website for BK IT Services",
+  "main": "index.html",
+  "license": "All rights reserved",
+  "homepage": "http://bkit.ca",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "waypoints": "~4.0.0"
+  }
+}

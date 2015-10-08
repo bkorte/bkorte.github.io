@@ -1,0 +1,76 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    order: 2;
+  }
+
+  &__info {
+    flex-direction: row;
+  }
+
+  @media(min-width: $medium) {
+    flex-direction: row;
+
+    &__form {
+      order: 1;
+      flex: 0 1 60%;
+    }
+
+    &__info {
+      order: 2;
+      flex: 1 0 40%;
+      padding-left: 4rem;
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      text-transform: uppercase;
+      color: $grey;
+      flex: 0 0 100%;
+    }
+
+    &__name {
+      color: #000;
+      font-size: 1.125rem;
+      margin: 0.5rem 0;
+    }
+
+    &__extra {
+      color: $grey;
+    }
+
+    &__address {
+      color: $offblack;
+      margin: 0.5rem 0;
+      flex: 0 0 50%;
+    }
+
+    &__list {
+      line-height: 1.7rem;
+      margin-top: 0;
+
+      &__label {
+        color: $grey;
+        padding-right: 3px;
+      }
+
+      &__value {
+        color: #000;
+      }
+
+    }
+  }
+
+  &__extra {
+    flex: 0 0 50%;
+    color: $grey;
+    margin: 0;
+  }
+}

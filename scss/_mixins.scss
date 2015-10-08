@@ -1,0 +1,11 @@
+@mixin transition() {
+  transition: all 100ms ease;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

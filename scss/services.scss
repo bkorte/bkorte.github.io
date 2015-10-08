@@ -1,0 +1,194 @@
+.service {
+  @include clearfix;
+  @include transition;
+  margin: 2rem 0;
+  position: relative;
+
+  &:after {
+    transition: all 200ms ease;
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    transform: skewY(1deg);
+    z-index: -1;
+  }
+
+  &__summary {
+    max-width: $small;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @media(min-width: $small_padded) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__modal {
+    color: #000;
+    padding: 5rem;
+
+    &:after {
+      background: $blue;
+      transform: skewY(3deg);
+    }
+
+    &__close {
+      display: block;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 26px;
+      top: -12.5px;
+      left: 50%;
+      margin-left: -13px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 25px;
+      opacity: 0;
+      transform: scale(0.6);
+    }
+
+    .service__modal__close {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .service__more {
+      display: none;
+    }
+
+    .service__details {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    float: left;
+  }
+
+  &__info {
+    margin: 0 0 0 60px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+    font-size: 1.375rem;
+  }
+
+  &__text {
+    margin: 5px 0 1rem;
+  }
+
+  &__details {
+    display: none;
+
+    // Desktop
+    margin: 0 -1rem;
+    flex-flow: row wrap;
+
+    &__container {
+      max-width: $medium;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    &__title {
+      font-size: 0.875rem;
+      color: $grey_alpha;
+      text-transform: uppercase;
+    }
+
+    &__more,
+    &__services {
+      padding: 0 1rem;
+      flex: 0 0 50%;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &__item {
+        padding: 0.5rem 0 0.5rem 35px;
+        background: url('img/check.svg') no-repeat left center;
+      }
+    }
+
+    &__cta {
+      flex: 0 0 100%;
+      text-align: center;
+      margin: 2rem 0 0;
+
+      &__btn {
+        border: 3px solid #000;
+
+        &, &:active, &:hover, &:visited {
+          color: #000;
+        }
+
+        &:hover {
+          background: $blue;
+        }
+      }
+    }
+
+  }
+
+  &s {
+
+    &__cta {
+
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      border-radius: $radius*1.5;
+      border: 1px solid $lightgrey;
+      margin: 2rem 0;
+
+      @media(min-width: $medium) {
+        padding: 1rem 2rem;
+        margin: 6rem auto;
+        max-width: 500px;
+      }
+
+      &__title {
+        flex: 1 0 auto;
+        margin: 0 1rem 0 0;
+        color: #000;
+      }
+
+      &__button {
+        flex: 0 0 auto;
+      }
+
+    }
+
+    &__question {
+
+      @media(min-width: $medium) {
+        flex: 0 0 50%;
+        padding: 1rem 2rem;
+      }
+
+      &s {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+      }
+    }
+
+  }
+
+}

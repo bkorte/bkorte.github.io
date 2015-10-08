@@ -1,0 +1,103 @@
+.header {
+  background: #000 url('img/hero.jpg') no-repeat center bottom;
+  color: #fff;
+
+  @media(max-width: $small - 1px) {
+    background-position: -620px -180px;
+    background-size: 1291px;
+  }
+
+  @media(max-width: 500px) {
+    background-position: -480px -130px;
+    background-size: 1060px;
+  }
+  @media(max-width: 450px) {
+    background-position: -540px -130px;
+    background-size: 1060px;
+  }
+
+  @media(max-width: 400px) {
+    background-position: -540px -130px;
+    background-size: 1030px;
+  }
+
+  @media(max-width: 340px) {
+    background-position: -480px -80px;
+    background-size: 900px;
+  }
+  &__navbar {
+    @include clearfix;
+    padding: 2rem 1rem;
+
+    @media(min-width: $medium) {
+      padding-left: 0;
+      padding-right: 0;
+
+      &__logo {
+        float: left;
+      }
+
+      &__nav {
+        float: right;
+      }
+    }
+
+    &__logo {
+      display: inline-block;
+      text-decoration: none;
+
+      &__mark {
+        max-width: 60px;
+        display: inline-block;
+        float: left;
+        margin-right: 1rem;
+      }
+
+      &__text {
+        float: left;
+        padding-top: 14px;
+        text-align: left;
+      }
+
+      &__name {
+        font-size: 1rem;
+        line-height: 1.2em;
+        color: #fff;
+        margin: 0;
+      }
+
+      &__industry {
+        font-weight: normal;
+        font-size: 0.75rem;
+        line-height: 1.2em;
+        color: $offwhite_alpha;
+        margin: 0;
+      }
+    }
+
+    &__nav {
+      padding: 1rem;
+    }
+  }
+
+  &__hero,
+  &__navbar {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  &__hero {
+    padding: 9rem 1rem 8rem;
+
+    @media(min-width: 500px) {
+      padding-top: 14rem;
+    }
+
+    @media(min-width: $small) {
+      padding-top: 0rem;
+    }
+    @media(min-width: $medium) {
+      padding-top: 4rem;
+    }
+  }
+}
