@@ -10,6 +10,8 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
+          'bower_components/smooth-scroll/src/js/*.js',
+          'bower_components/waypoints/lib/noframework.waypoints.js',
           'js/*.js'
         ],
         dest: 'script.js',
@@ -86,7 +88,9 @@ module.exports = function(grunt) {
         dest: 'js/_bower.js',
         cssDest: 'scss/_bower.scss',
         exclude: [
-          'modernizr'
+          'smooth-scroll',
+          'modernizr',
+          'waypoints'
         ],
         bowerOptions: {
           relative: false

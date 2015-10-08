@@ -6,6 +6,13 @@ bkit.init = function(){
 
   bkit.services.init();
   bkit.portfolio.init();
+
+  smoothScroll.init({
+    selector: '[data-scroll]',
+    speed: 500,
+    easing: 'easeInOutCubic',
+    updateURL: true
+  });
 }
 
 bkit.services = {
@@ -25,7 +32,9 @@ bkit.services = {
         items[i].classList.remove('service__modal');
       }
     }
+
     el.classList.toggle('service__modal');
+    smoothScroll.animateScroll(null, '#'+el.getAttribute('id'), { offset: '30', updateURL: false});
 
     if(event && event.target && ! event.target.classList.contains('service__details__cta__btn')) {
       event.preventDefault();

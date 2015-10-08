@@ -43,6 +43,8 @@
       appearance: none;
       background: none;
       border-radius: 0;
+      background: #fff url('img/select_arrow.svg') no-repeat right center;
+      background-position: right 1rem center;
     }
 
     &--textarea {
