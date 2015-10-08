@@ -3,6 +3,7 @@
   @include transition;
   margin: 2rem 0;
   position: relative;
+  cursor: pointer;
 
   &:after {
     transition: all 200ms ease;
@@ -149,13 +150,12 @@
   &s {
 
     &__cta {
-
       padding: 1.5rem 2.5rem;
       display: flex;
       align-items: center;
       border-radius: $radius*1.5;
       border: 1px solid $lightgrey;
-      margin: 2rem 0;
+      margin: 2rem 1rem;
 
       @media(min-width: $medium) {
         padding: 1rem 2rem;

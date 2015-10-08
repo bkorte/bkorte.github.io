@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     concat: {
       early: {
         src: [
-          'build/modernizr.js'
+          'js/modernizr.js'
         ],
         dest: 'early.js',
       },
@@ -97,28 +97,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    modernizr: {
-      dist: {
-        "parseFiles": true,
-        "customTests": [],
-        "dest": "build/modernizr.js",
-        "tests": [
-          "css/flexbox",
-          "css/flexboxlegacy",
-          "css/flexboxtweener",
-          "css/flexwrap",
-          "css/transforms",
-          "css/transforms3d",
-          "svg/asimg"
-        ],
-        "extensibility": [
-          "html5shiv",
-          "setClasses"
-        ],
-        "uglify": true
-      }
-    },
-
     connect: {
       server: {
         options: {
@@ -137,7 +115,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-bower-concat');
-  grunt.loadNpmTasks("grunt-modernizr");
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['bower_concat', 'concat', 'uglify', 'cssmin', 'imagemin', 'sass', 'autoprefixer', 'connect', 'watch']);

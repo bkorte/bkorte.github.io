@@ -4,14 +4,34 @@
     margin: 1rem 0;
   }
 
+  &__thanks,
+  &__error {
+    display: none;
+    font-weight: bold;
+    padding: 2rem;
+    border: 3px solid $blue;
+    font-size: 1.2rem;
+    color: $blue;
+    text-align: center;
+  }
+
+  &__error {
+    color: $red;
+    border-color: $red;
+  }
+
   &__field {
     display: block;
     flex: 0 0 100%;
     padding: 0 1rem;
     margin: 1rem 0;
 
-    &--half {
-      flex: 0 0 50%;
+    @media(min-width: $small) {
+
+      &--half {
+        flex: 0 0 50%;
+      }
+
     }
 
     &s {
@@ -49,6 +69,13 @@
 
     &--textarea {
       min-height: 240px;
+    }
+
+    &--error {
+      color: $red;
+      outline: none;
+      border-color: $red;
+      box-shadow: 0 0 0 3px $red inset;
     }
 
     &:focus {

@@ -339,13 +339,11 @@
 
   <div class="contact section section--container">
     <div class="contact__form">
-      <form accept-charset="UTF-8" action="https://formkeep.com/f/f4755ff52c89" method="POST">
+      <form accept-charset="UTF-8" novalidate action="https://formkeep.com/f/f4755ff52c89" method="POST">
         <input type="hidden" name="utf8" value="✓">
 
-        <div id="thanks" class="contact__thanks">
-          <h2 class="contact__thanks__title">Thank you for your message!</h2>
-          <p>We'll be in touch very soon.</p>
-        </div>
+        <p id="error" class="form__error">Woah there. Please fill out the required fields.</p>
+        <p id="thanks" class="form__thanks">Thank you for your message! We'll be in touch very soon.</p>
 
         <div class="form__fields">
           <label class="form__field form__field--half">
@@ -360,7 +358,7 @@
             <span class="form__label">
               Organization:
             </span>
-            <input type="text" name="Organization" required="required" class="form__input">
+            <input type="text" name="Organization" class="form__input">
           </label>
 
           <label class="form__field form__field--half">
@@ -375,14 +373,14 @@
             <span class="form__label">
               Phone Number:
             </span>
-            <input type="tel" name="Phone" required="required" class="form__input">
+            <input type="tel" name="Phone" class="form__input">
           </label>
 
           <label class="form__field form__field--half">
             <span class="form__label">
               Website Address:
             </span>
-            <input type="url" name="URL" required="required" class="form__input">
+            <input type="url" name="URL" class="form__input">
           </label>
           <label class="form__field form__field--half">
             <span class="form__label">

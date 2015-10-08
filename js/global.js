@@ -7,13 +7,16 @@ bkit.init = function(){
   bkit.services.init();
   bkit.portfolio.init();
 
+  bkit.contact.thanks();
+  document.querySelector('form').addEventListener('submit', bkit.contact.validate, false);
+
   smoothScroll.init({
     selector: '[data-scroll]',
     speed: 500,
     easing: 'easeInOutCubic',
     updateURL: true
   });
-}
+};
 
 bkit.services = {
   init: function() {
@@ -63,6 +66,41 @@ bkit.portfolio = {
       });
     }
   }
+};
+
+bkit.contact = {
+
+  validate: function(e) {
+    var errors = [];
+    var root = e.target;
+    var required = root.querySelectorAll('[required]');
+
+    for (i = 0; i < required.length; ++i) {
+      var field = required[i];
+
+      if(field.value === null || field.value === "") {
+        field.classList.add('form__input--error');
+        errors.push(field);
+      } else {
+        field.classList.remove('form__input--error');
+      }
+    }
+
+    if(errors.length > 0) {
+      document.getElementById('error').setAttribute('style', 'display: block;');
+      smoothScroll.animateScroll(null, '#error', { offset: '30', updateURL: false});
+      e.preventDefault();
+    } else {
+      document.getElementById('error').setAttribute('style', 'display: none;');
+    }
+  },
+
+  thanks: function() {
+    if(window.location.hash && window.location.hash == '#thanks') {
+      document.getElementById('thanks').setAttribute('style', 'display: block');
+    }
+  }
+
 }
 
-document.addEventListener('DOMContentLoaded', bkit.init);
+document.addEventListener('DOMContentLoaded', bkit.init, false);
