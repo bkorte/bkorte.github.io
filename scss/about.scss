@@ -28,8 +28,6 @@
   }
 
   &__text {
-    flex: 0 1 100%;
-
     @media(max-width: $small - 1px) {
       order: 2;
     }
@@ -37,17 +35,16 @@
 
   &__card {
     text-align: center;
-    flex: 0 0 200px;
     display: flex;
-    flex-direction: column;
 
     @media(max-width: $small - 1px) {
-      flex: 0 0 100%;
       order: 1;
-      flex-direction: row;
       align-items: center;
     }
     @media(min-width: $small) {
+
+      flex: 0 0 200px;
+      flex-direction: column;
       padding-left: 2rem;
     }
 
