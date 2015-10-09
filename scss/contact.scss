@@ -49,7 +49,10 @@
     &__address {
       color: $offblack;
       margin: 0.5rem 0;
-      flex: 0 0 50%;
+
+      @media(max-width: $medium) {
+        flex: 0 0 50%;
+      }
     }
 
     &__list {
@@ -69,8 +72,11 @@
   }
 
   &__extra {
-    flex: 0 0 50%;
     color: $grey;
     margin: 0;
+
+    @media(max-width: $medium) {
+      flex: 0 0 50%;
+    }
   }
 }
