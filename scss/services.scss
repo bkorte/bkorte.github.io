@@ -72,6 +72,7 @@
     }
 
     .service__details {
+      display: block;
       display: flex;
     }
   }
@@ -114,10 +115,12 @@
       text-transform: uppercase;
     }
 
-    &__more,
-    &__services {
-      padding: 0 1rem;
-      flex: 0 0 50%;
+    @media(min-width: $medium) {
+      &__more,
+      &__services {
+        padding: 0 1rem;
+        flex: 0 0 50%;
+      }
     }
 
     &__list {
@@ -155,11 +158,11 @@
 
     &__cta {
       padding: 1.5rem 2.5rem;
-      display: flex;
       align-items: center;
       border-radius: $radius*1.5;
       border: 1px solid $lightgrey;
       margin: 2rem 1rem;
+      display: flex;
 
       @media(min-width: $medium) {
         padding: 1rem 2rem;
@@ -195,4 +198,32 @@
 
   }
 
+}
+
+.no-flexbox {
+  .services {
+    &__cta {
+      @include clearfix();
+
+      &__title {
+        float: left;
+      }
+
+      &__button {
+        float: right;
+      }
+
+    }
+
+    @media(min-width: $small) {
+      &__question {
+        float: left;
+        width: 50%;
+
+        &s {
+          @include clearfix();
+        }
+      }
+    }
+  }
 }
