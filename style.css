@@ -783,7 +783,7 @@ button.btn {
     .about__testimonial__text,
     .about__testimonial__who {
       margin: 0.5rem 0; }
-    .about__testimonial__who, .about__testimonial__who a, .about__testimonial__who a:visited, .about__testimonial__who a:active {
+    .about__testimonial__who, .about__testimonial__who a, .about__testimonial__who a:hover, .about__testimonial__who a:visited, .about__testimonial__who a:active {
       color: #fff; }
     .about__testimonial__who a:hover {
       text-decoration: none; }
