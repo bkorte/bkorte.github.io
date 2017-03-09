@@ -12,10 +12,6 @@ html {
   }
 }
 
-body {
-  padding-bottom: 8rem;
-}
-
 a {
   color: $blue;
   @include transition();
@@ -52,5 +48,16 @@ a {
     background: $blue;
     transform: skewY(-3deg);
     z-index: 1;
+  }
+}
+
+.footer {
+  background: #e9f0f0;
+  text-align: center;
+  padding: 2rem;
+  margin: 4rem 0 0;
+
+  a {
+    color: $darkgrey;
   }
 }

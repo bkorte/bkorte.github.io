@@ -1221,7 +1221,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   Waypoint.Adapter = NoFrameworkAdapter
 }())
 ;
-
 /*
  * classList.js: Cross-browser full element.classList implementation.
  * 2014-07-23

@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'bower_components/smooth-scroll/src/js/*.js',
+          'bower_components/smooth-scroll/src/js/smooth-scroll.js',
           'bower_components/waypoints/lib/noframework.waypoints.js',
           'js/*.js'
         ],
@@ -23,16 +23,16 @@ module.exports = function(grunt) {
         dest: 'script.min.js'
       }
     },
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'img/'
-        }]
-      }
-    },
+    // imagemin: {
+    //   dynamic: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'img/',
+    //       src: ['**/*.{png,jpg,gif}'],
+    //       dest: 'img/'
+    //     }]
+    //   }
+    // },
     sass: {
       dist: {
         options: {
@@ -83,20 +83,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    bower_concat: {
-      all: {
-        dest: 'js/_bower.js',
-        cssDest: 'scss/_bower.scss',
-        exclude: [
-          'smooth-scroll',
-          'modernizr',
-          'waypoints'
-        ],
-        bowerOptions: {
-          relative: false
-        }
-      }
-    },
     connect: {
       server: {
         options: {
@@ -114,9 +100,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['bower_concat', 'concat', 'uglify', 'cssmin', 'imagemin', 'sass', 'autoprefixer', 'connect', 'watch']);
+  grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'sass', 'autoprefixer', 'connect', 'watch']);
 
 };
