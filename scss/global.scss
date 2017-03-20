@@ -57,6 +57,47 @@ a {
   padding: 2rem;
   margin: 4rem 0 0;
 
+  p {
+    margin: 2rem 0;
+  }
+
+  &__logo {
+    margin: 1rem auto 0;
+  }
+
+  &__github {
+    @include transition();
+    display: inline-flex;
+    align-items: center;
+    border-color: #b2babc;
+    color: #879094 !important;
+
+    @media(min-width: $small) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    svg {
+      flex-shrink: 0;
+      margin-left: 1rem;
+
+      path {
+        @include transition();
+        fill: #879094;
+      }
+    }
+
+    &:hover {
+      border-color: $blue;
+      background-color: $blue;
+      color: #fff !important;
+
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+
   a {
     color: $darkgrey;
   }

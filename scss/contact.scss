@@ -6,10 +6,6 @@
     order: 2;
   }
 
-  &__info {
-    flex-direction: row;
-  }
-
   @media(min-width: $medium) {
     flex-direction: row;
 
@@ -22,14 +18,10 @@
       order: 2;
       flex: 1 0 40%;
       padding-left: 4rem;
-      flex-direction: column;
     }
   }
 
   &__info {
-    display: flex;
-    flex-wrap: wrap;
-
     &__title {
       text-transform: uppercase;
       color: $grey;

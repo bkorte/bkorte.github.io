@@ -33,6 +33,18 @@
     }
   }
 
+  &--grey {
+    background: $grey;
+
+    &, &:hover, &:visited, &:active {
+      color: #fff;
+    }
+
+    &:hover {
+      background: darken($grey, 20%);
+    }
+  }
+
   &--small {
     font-size: 13px;
     line-height: 1em;
@@ -45,4 +57,5 @@ button.btn {
   -webkit-appearance: none;
   appearance: none;
   border: none;
+  outline: none;
 }
