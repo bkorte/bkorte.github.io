@@ -1,4 +1,4 @@
-@-webkit-keyframes portfolio-screenshot {
+@keyframes portfolio {
   $offset: -70px;
   0% {
     opacity: 1;
@@ -84,12 +84,14 @@
         top: 0;
         left: 0;
         width: 100%;
+        animation: portfolio 10s linear 0s 3 normal;
+        animation-play-state: paused;
       }
     }
   }
 
   &__item--active .portfolio__screenshot__image img {
-    animation: portfolio-screenshot 10s linear 0s 3 normal;
+    animation-play-state: running;
   }
 
   &__details {
